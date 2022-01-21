@@ -1,6 +1,6 @@
 # Guzzle multibyte
 
-Пакет для корректного обрезания ошибок при мультибайтовых ответах
+This package provides improved BodySummarizer() that can correctly handle and truncate large multibyte responses.
 
 ## Установка
 
