@@ -1,0 +1,21 @@
+{
+    "name": "ensi/guzzle-multibyte",
+    "description": "",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Natalia Golubkova",
+            "email": "golubkova@greensight.ru"
+        }
+    ],
+    "require": {
+        "php": "^8.0",
+        "guzzlehttp/guzzle": "^7.0.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Ensi\\GuzzleMultibyte\\": "src/"
+        }
+    }
+}
