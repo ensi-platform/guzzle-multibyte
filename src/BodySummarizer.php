@@ -20,6 +20,7 @@ class BodySummarizer implements BodySummarizerInterface
     {
         if ($message->getBody() instanceof Stream) {
             $message = $message->withBody(new MultibyteStream($message->getBody()));
+            $message->getBody()->rewind();
         }
 
         return (new GuzzleBodySummarizer($this->truncateAt))->summarize($message);
