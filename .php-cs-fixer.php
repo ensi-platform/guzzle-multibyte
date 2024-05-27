@@ -1,21 +1,27 @@
 <?php
 
 $finder = Symfony\Component\Finder\Finder::create()
-    ->notPath('vendor')
-    ->in(__DIR__)
+    ->in([
+        __DIR__ . '/src',
+        __DIR__ . '/tests',
+    ])
     ->name('*.php')
+    ->notName('*.blade.php')
     ->ignoreDotFiles(true)
     ->ignoreVCS(true);
 
 return (new PhpCsFixer\Config())
     ->setRules([
         '@PSR2' => true,
+        '@PSR12' => true,
         'array_syntax' => ['syntax' => 'short'],
         'ordered_imports' => ['sort_algorithm' => 'alpha'],
         'no_unused_imports' => true,
         'trailing_comma_in_multiline' => true,
         'phpdoc_scalar' => true,
         'unary_operator_spaces' => true,
+        'binary_operator_spaces' => true,
+        'concat_space' => ['spacing' => 'one'],
         'blank_line_before_statement' => [
             'statements' => ['break', 'continue', 'declare', 'return', 'throw', 'try'],
         ],
