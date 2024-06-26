@@ -17,7 +17,7 @@ class MultibyteStream implements StreamInterface
     /**
      * @inheritDoc
      */
-    public function read($length)
+    public function read($length): string
     {
         return mb_substr($this->stream->getContents(), 0, $length);
     }
