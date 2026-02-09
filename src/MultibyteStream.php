@@ -9,6 +9,8 @@ class MultibyteStream implements StreamInterface
 {
     use StreamDecoratorTrait;
 
+    protected StreamInterface $stream;
+
     public function __construct(StreamInterface $stream)
     {
         $this->stream = $stream;
